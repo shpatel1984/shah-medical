@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/Users/samirpatel/.nvm/versions/node/v24.14.0/bin/npx",
+      "runtimeArgs": ["next", "dev", "--turbopack", "-p", "3787"],
+      "port": 3787,
+      "cwd": "/Users/samirpatel/Desktop/shah-medical"
+    }
+  ]
+}
