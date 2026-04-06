@@ -23,12 +23,6 @@ const ClockIcon = () => (
   </svg>
 );
 
-const StarIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-  </svg>
-);
-
 const MenuIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
@@ -99,23 +93,6 @@ const services = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Hiroshi G.",
-    rating: 5,
-    text: "I have been a patient here for several months and I am so grateful to have found such a wonderful family practice. Dr. Shah is incredibly caring and knowledgeable.",
-  },
-  {
-    name: "Eric C.",
-    rating: 5,
-    text: "Dr. Shah was attentive and I really appreciated how he took the time to explain my diagnosis and treatment options. The office staff was very friendly.",
-  },
-  {
-    name: "Zelda D.",
-    rating: 5,
-    text: "Genuinely impressed with the level of care I received. Dr. Shah took the time to listen to my concerns and explain everything clearly.",
-  },
-];
 
 /* ─── Components ─── */
 
@@ -133,7 +110,6 @@ function Navbar() {
     ["About", "#about"],
     ["Recognition", "#recognition"],
     ["Services", "#services"],
-    ["Testimonials", "#testimonials"],
     ["Contact", "#contact"],
   ];
 
@@ -272,12 +248,11 @@ function Hero() {
           </div>
 
           {/* Quick stats */}
-          <div className="animate-fade-up opacity-0 animation-delay-800 mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-2xl">
+          <div className="animate-fade-up opacity-0 animation-delay-800 mt-16 grid grid-cols-3 gap-8 max-w-lg">
             {[
               ["30+", "Years in Practice"],
               ["10,000+", "Patients Served"],
               ["Walk-Ins", "No Appointment Necessary"],
-              ["Free Parking", "Public Lot Near Office"],
             ].map(([value, label]) => (
               <div key={label}>
                 <div className="text-2xl font-display font-semibold text-dark">
@@ -519,66 +494,6 @@ function Services() {
   );
 }
 
-function Testimonials() {
-  const { ref, inView } = useInView();
-
-  return (
-    <section id="testimonials" className="relative py-32" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
-        <div
-          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <span className="text-xs tracking-[0.3em] uppercase text-gold mb-4 block">
-            Patient Stories
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-dark">
-            Trusted by <span className="gradient-text">Families</span>
-          </h2>
-          <p className="text-dark-muted">
-            See what our patients have to say about their experience at our
-            practice.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div
-              key={t.name}
-              className={`glass-card rounded-2xl p-8 transition-all duration-700 ${
-                inView
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: inView ? `${i * 150}ms` : "0ms" }}
-            >
-              {/* Quote mark */}
-              <div className="text-4xl text-accent/20 font-display leading-none mb-4">
-                &ldquo;
-              </div>
-              <p className="text-dark-secondary text-sm leading-relaxed mb-6">
-                {t.text}
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-sm text-dark">{t.name}</p>
-                  <div className="flex gap-0.5 mt-1">
-                    {[...Array(t.rating)].map((_, j) => (
-                      <StarIcon key={j} />
-                    ))}
-                  </div>
-                </div>
-                <span className="text-xs text-dark-muted">Verified Patient</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Contact() {
   const { ref, inView } = useInView();
 
@@ -777,7 +692,6 @@ export default function Home() {
       <About />
       <Recognition />
       <Services />
-      <Testimonials />
       <Contact />
       <Footer />
     </main>
