@@ -32,7 +32,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-navy text-white font-sans">{children}</body>
+      <body className="bg-warm-white text-dark font-sans">{children}</body>
     </html>
   );
 }
