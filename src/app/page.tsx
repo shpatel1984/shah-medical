@@ -69,33 +69,33 @@ function useInView(threshold = 0.15) {
 const services = [
   {
     title: "Preventative Care",
-    description: "Annual physicals, screenings, immunizations, and wellness programs designed to keep you healthy and detect issues early.",
+    description: "Annual physicals, health screenings, immunizations, and personalized wellness programs to keep you healthy and detect issues early.",
     icon: "🛡️",
   },
   {
     title: "Chronic Disease Management",
-    description: "Expert management of diabetes, hypertension, heart disease, and other chronic conditions with evidence-based protocols.",
+    description: "Evidence-based management of diabetes, hypertension, heart disease, and other chronic conditions with ongoing monitoring and care.",
     icon: "📋",
   },
   {
-    title: "Acute Care",
-    description: "Same-day and urgent appointments for sudden illness, infections, injuries, and other conditions requiring prompt attention.",
+    title: "Acute & Urgent Care",
+    description: "Walk-in and same-day appointments for sudden illness, infections, injuries, and other conditions requiring prompt attention.",
     icon: "⚡",
   },
   {
-    title: "Women's Health",
-    description: "Comprehensive women's healthcare including gynecological exams, family planning, and menopause management.",
-    icon: "💐",
+    title: "In-House Diagnostics",
+    description: "On-site EKG, pulmonary function testing, autonomic function testing, vascular and diagnostic ultrasounds, lab draws, and vaccinations.",
+    icon: "🏥",
   },
   {
-    title: "Pediatric Care",
-    description: "Well-child visits, developmental screenings, vaccinations, and care for common childhood illnesses.",
-    icon: "👶",
+    title: "Cardiology",
+    description: "On-site cardiologist available by appointment for comprehensive cardiovascular evaluation, testing, and treatment.",
+    icon: "❤️",
   },
   {
-    title: "Mental Health",
-    description: "Screening and treatment for anxiety, depression, and stress-related conditions with compassionate, holistic support.",
-    icon: "🧠",
+    title: "Women's & Pediatric Health",
+    description: "Gynecological exams, family planning, menopause management, well-child visits, developmental screenings, and pediatric care.",
+    icon: "👨‍👩‍👧",
   },
 ];
 
@@ -272,11 +272,12 @@ function Hero() {
           </div>
 
           {/* Quick stats */}
-          <div className="animate-fade-up opacity-0 animation-delay-800 mt-16 grid grid-cols-3 gap-8 max-w-md">
+          <div className="animate-fade-up opacity-0 animation-delay-800 mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-2xl">
             {[
               ["30+", "Years in Practice"],
               ["10,000+", "Patients Served"],
-              ["Walk-Ins Welcome!", "No Appointment Necessary"],
+              ["Walk-Ins", "No Appointment Necessary"],
+              ["Free Parking", "Public Lot Near Office"],
             ].map(([value, label]) => (
               <div key={label}>
                 <div className="text-2xl font-display font-semibold text-dark">
@@ -646,6 +647,23 @@ function Contact() {
                   >
                     Get Directions &rarr;
                   </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Parking */}
+            <div className="glass-card rounded-2xl p-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-2.25 0h-2.25m4.5 0V6.375c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h.375" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1 text-dark">Convenient Parking</h3>
+                  <p className="text-dark-secondary text-sm">
+                    Public metered parking lot located near the office
+                  </p>
                 </div>
               </div>
             </div>
