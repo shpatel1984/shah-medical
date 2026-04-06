@@ -405,7 +405,7 @@ function Recognition() {
               alt: "CarePoint Health auditorium dedication ceremony",
               title: "CarePoint Health Auditorium Dedication",
               summary:
-                "CarePoint Health dedicated a modernized auditorium and community center at Hoboken University Medical Center in Dr. Shah\u2019s honor, recognizing his extraordinary contributions to Hudson County.",
+                "CarePoint Health honored Dr. Shah by dedicating a modernized auditorium and community center at Hoboken University Medical Center in his name. The renovated space now hosts prenatal classes, support groups, blood drives, and other community programs.",
               link: "https://www.carepointhealth.org/2024/08/09/carepoint-honors-dr-hemant-shah-with-dedication-of-hoboken-auditorium/",
             },
             {
@@ -413,7 +413,7 @@ function Recognition() {
               alt: "St. Joseph\u2019s School for the Blind sensory theater ribbon cutting",
               title: "St. Joseph\u2019s School for the Blind Sensory Theater",
               summary:
-                "St. Joseph\u2019s School for the Blind honored Dr. Shah for funding a new sensory theater, enabling more students and families to benefit from multisensory learning experiences.",
+                "St. Joseph\u2019s School for the Blind honored Dr. Shah for funding the expansion of their sensory theater into a larger classroom space. The theater features tactile art, floor projectors, music, a ball pit, and aromatherapy to stimulate students\u2019 senses.",
               link: "https://www.sliceofculture.com/st-josephs-school-for-the-blind-honors-dr-hemant-shah-unveils-new-sensory-theater/",
             },
             {
@@ -421,7 +421,7 @@ function Recognition() {
               alt: "Dr. Hemant Shah Research Center opening at Christ Hospital",
               title: "Dr. Hemant Shah Research Center",
               summary:
-                "CarePoint Health opened the Dr. Hemant Shah Research Center at Christ Hospital, supporting healthcare research and mentoring in the Hudson County community.",
+                "CarePoint Health opened the Dr. Hemant Shah Research Center at Christ Hospital to support healthcare research, facilitate mentoring, and provide grant opportunities. The ribbon cutting was attended by Jersey City Mayor Steven Fulop and other civic leaders.",
               link: "https://www.nj.com/hudson/2022/08/christ-hospital-opens-dr-hemant-shah-research-center.html",
             },
           ].map((event) => (
