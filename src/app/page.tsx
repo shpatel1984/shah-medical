@@ -385,7 +385,7 @@ function Recognition() {
               link: "https://www.carepointhealth.org/2024/08/09/carepoint-honors-dr-hemant-shah-with-dedication-of-hoboken-auditorium/",
             },
             {
-              image: "/ceremony2.png",
+              image: "https://www.sliceofculture.com/wp-content/uploads/2024/08/IMG_8744_jpg-1024x814.jpg",
               alt: "St. Joseph\u2019s School for the Blind sensory theater ribbon cutting",
               title: "St. Joseph\u2019s School for the Blind Sensory Theater",
               summary:
